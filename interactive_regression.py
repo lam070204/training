@@ -23,7 +23,8 @@ TRANSFORMS = transforms.Compose([
 ])
 
 # Dataset setup
-dataset = XYDataset("road_following", ['apex'], TRANSFORMS, random_hflip=True)
+dataset = XYDataset("road_following", ['apex', 'stop_sign', 'traffic_light'], TRANSFORMS, random_hflip=True)
+
 
 # Model setup
 device = torch.device('cuda')
